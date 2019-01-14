@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BlazeImportSettings">
+    <option name="buildSystem" value="Bazel" />
+    <option name="locationHash" value="datastructures-056eb04e" />
+    <option name="projectDataDirectory" value="$PROJECT_DIR$" />
+    <option name="projectName" value="data_structures" />
+    <option name="projectViewFile" value="$PROJECT_DIR$/.bazelproject" />
+    <option name="workspaceRoot" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="false">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6bc08e18-a3f7-48f6-a6a0-9e818e19e794" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-756485791">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="BUILD" value="1" />
+          <entry key="Disassembly" value="1" />
+          <entry key="ObjectiveC" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="ObjectiveC" value="1010" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../data_structures/queue.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-1">
+                  <caret line="32" column="42" lean-forward="true" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+                  <folding>
+                    <element signature="e#67#84#0" expanded="true" />
+                    <element signature="e#143#163#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../data_structures/BUILD">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="203">
+                  <caret line="7" selection-start-line="7" selection-end-line="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../data_structures/queue_tests.cc">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="812">
+                  <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+                  <folding>
+                    <element signature="e#0#34#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../data_structures/queue_tests.cc" />
+        <option value="$PROJECT_DIR$/../data_structures/queue.h" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="576" />
+    <option name="y" value="134" />
+    <option name="width" value="2718" />
+    <option name="height" value="1780" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="data_structures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Documents" type="34d14456:WorkspaceRootNode" />
+            </path>
+            <path>
+              <item name="data_structures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Documents" type="34d14456:WorkspaceRootNode" />
+              <item name="data_structures" type="9fb85e4c:BlazePsiDirectoryRootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Bazel Command.Bazel test: //data_structures:queue_tests">
+    <configuration name="Bazel test: QueueTests.testAddFiveItemsThenRemoveThree (//data_structures:queue_tests)" type="BlazeCommandRunConfigurationType" factoryName="Bazel Command" temporary="true">
+      <blaze-settings handler-id="BlazeCLionRunConfigurationHandlerProvider" blaze-command="test">
+        <blaze-target kind="cc_test">//data_structures:queue_tests</blaze-target>
+        <blaze-user-flag>--test_filter=QueueTests.testAddFiveItemsThenRemoveThree:QueueTests/*.testAddFiveItemsThenRemoveThree:*/QueueTests.testAddFiveItemsThenRemoveThree/*:*/QueueTests/*.testAddFiveItemsThenRemoveThree</blaze-user-flag>
+        <env_state>
+          <envs />
+        </env_state>
+      </blaze-settings>
+      <method v="2">
+        <option name="Blaze.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Bazel test: QueueTests.testAddOneThenRemoveOne (//data_structures:queue_tests)" type="BlazeCommandRunConfigurationType" factoryName="Bazel Command" temporary="true">
+      <blaze-settings handler-id="BlazeCLionRunConfigurationHandlerProvider" blaze-command="test">
+        <blaze-target kind="cc_test">//data_structures:queue_tests</blaze-target>
+        <blaze-user-flag>--test_filter=QueueTests.testAddOneThenRemoveOne:QueueTests/*.testAddOneThenRemoveOne:*/QueueTests.testAddOneThenRemoveOne/*:*/QueueTests/*.testAddOneThenRemoveOne</blaze-user-flag>
+        <env_state>
+          <envs />
+        </env_state>
+      </blaze-settings>
+      <method v="2">
+        <option name="Blaze.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Bazel test: //data_structures:queue_tests" type="BlazeCommandRunConfigurationType" factoryName="Bazel Command" temporary="true">
+      <blaze-settings handler-id="BlazeCLionRunConfigurationHandlerProvider" blaze-command="test">
+        <blaze-target kind="cc_test">//data_structures:queue_tests</blaze-target>
+        <env_state>
+          <envs />
+        </env_state>
+      </blaze-settings>
+      <method v="2">
+        <option name="Blaze.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Twisted Trial">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Bazel Command.Bazel test: //data_structures:queue_tests" />
+      <item itemvalue="Bazel Command.Bazel test: QueueTests.testAddOneThenRemoveOne (//data_structures:queue_tests)" />
+      <item itemvalue="Bazel Command.Bazel test: QueueTests.testAddFiveItemsThenRemoveThree (//data_structures:queue_tests)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Bazel Command.Bazel test: //data_structures:queue_tests" />
+        <item itemvalue="Bazel Command.Bazel test: QueueTests.testAddFiveItemsThenRemoveThree (//data_structures:queue_tests)" />
+        <item itemvalue="Bazel Command.Bazel test: QueueTests.testAddOneThenRemoveOne (//data_structures:queue_tests)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6bc08e18-a3f7-48f6-a6a0-9e818e19e794" name="Default Changelist" comment="" />
+      <created>1547426929895</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1547426929895</updated>
+      <workItem from="1547426931537" duration="169000" />
+      <workItem from="1547427122408" duration="1808000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Bazel_test__QueueTests_testAddOneThenRemoveOne_(__data_structures_queue_tests) - 2019.01.13 at 18h 56m 25s.xml">
+      <configuration name="Bazel test: QueueTests.testAddOneThenRemoveOne (//data_structures:queue_tests)" configurationId="BlazeCommandRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Bazel_test____data_structures_queue_tests - 2019.01.13 at 18h 56m 31s.xml">
+      <configuration name="Bazel test: //data_structures:queue_tests" configurationId="BlazeCommandRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Bazel_test____data_structures_queue_tests - 2019.01.13 at 18h 59m 28s.xml">
+      <configuration name="Bazel test: //data_structures:queue_tests" configurationId="BlazeCommandRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Bazel_test__QueueTests_testAddFiveItemsThenRemoveThree_(__data_structures_queue_tests) - 2019.01.13 at 19h 01m 46s.xml">
+      <configuration name="Bazel test: QueueTests.testAddFiveItemsThenRemoveThree (//data_structures:queue_tests)" configurationId="BlazeCommandRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Bazel_test__QueueTests_testAddFiveItemsThenRemoveThree_(__data_structures_queue_tests) - 2019.01.13 at 19h 03m 09s.xml">
+      <configuration name="Bazel test: QueueTests.testAddFiveItemsThenRemoveThree (//data_structures:queue_tests)" configurationId="BlazeCommandRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Bazel_test__QueueTests_testAddFiveItemsThenRemoveThree_(__data_structures_queue_tests) - 2019.01.13 at 19h 03m 52s.xml">
+      <configuration name="Bazel test: QueueTests.testAddFiveItemsThenRemoveThree (//data_structures:queue_tests)" configurationId="BlazeCommandRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Bazel_test__QueueTests_testAddFiveItemsThenRemoveThree_(__data_structures_queue_tests) - 2019.01.13 at 19h 09m 10s.xml">
+      <configuration name="Bazel test: QueueTests.testAddFiveItemsThenRemoveThree (//data_structures:queue_tests)" configurationId="BlazeCommandRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Bazel_test____data_structures_queue_tests - 2019.01.13 at 19h 09m 17s.xml">
+      <configuration name="Bazel test: //data_structures:queue_tests" configurationId="BlazeCommandRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Bazel_test____data_structures_queue_tests - 2019.01.13 at 19h 10m 51s.xml">
+      <configuration name="Bazel test: //data_structures:queue_tests" configurationId="BlazeCommandRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Bazel_test____data_structures_queue_tests - 2019.01.13 at 19h 11m 41s.xml">
+      <configuration name="Bazel test: //data_structures:queue_tests" configurationId="BlazeCommandRunConfigurationType" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1977000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="-1" width="3840" height="2106" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17066666" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4984" visible="true" weight="0.27204704" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946666" weight="0.3997862" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Blaze Console" order="9" sideWeight="0.5016" side_tool="true" visible="true" weight="0.27204704" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Blaze Problems" order="12" sideWeight="0.49961948" weight="0.32944983" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>array_.get()[4]</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>array_.get()[3]</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>array_.get()[2]</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>array_.get()[1]</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>array_.get()[0]</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../data_structures/BUILD">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../data_structures/queue.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="32" column="42" lean-forward="true" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+          <folding>
+            <element signature="e#67#84#0" expanded="true" />
+            <element signature="e#143#163#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../data_structures/queue_tests.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
