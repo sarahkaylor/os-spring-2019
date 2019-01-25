@@ -1,0 +1,29 @@
+FAQ
+
+Q: Having trouble getting the Bazel plugin installed on IntelliJ or CLion?
+A: Make sure you use IntelliJ 2018.3 and CLion 2018.2 Currently, Bazel plugins aren't available for the newest IDEs.
+
+Q: I'm trying to use a Bazel plugin on <insert some IDE name> it doesn't seem to work, how do I make it work.
+A: Google makes Bazel plugins only for JetBrains IDEs. One exists for Eclipes, but it's of very poor quality. If you prefer to use another IDE, you can still run bazel commands on the command line.
+
+Q: I don't like Bazel, I want to use CMake / Make / Maven / Gradle / etc...
+A: Part of being a software engineer is getting use to new languages and tools as they're given to you by your employer. It is important to be aware of how many build systems and version control systems work to be a successful professional. Look at this as a learning experience and embrace it. Step outside of your comfort zone.
+
+Q: I have IntelliJ/CLion installed, and the Bazel plugin installed, but all of my files show up as "unsynced"
+A: On the menu bar, click Bazel -> Sync -> Sync Project with BUILD Files
+
+Q: I'm in IntelliJ/CLion and I ran the sync, but I'm seeing errors in a "Blaze Problems" window, what do I do?
+A: Possibility #1 : you're missing a dependency in your build rule in the BUILD file - read the errors on the IDE
+   Possibility #2 : the file you're working on does not compile - read the errors on the IDE for the errors that came back from the compiler.
+
+Q: How do I build a project on the command line?
+A: Example - bazel build //java/com/os/structures/map:MapImpl
+
+Q: How do I build all of the things in a folder?
+A: Example - bazel build //java/com/os/structures/...
+
+Q: How do I run a single unit test fixture on the command line?
+A: Example - bazel test //javatests/com/os/structures/map:MapImplTest
+
+Q: How do I run all of the tests on the command line for a project?
+A: Example - bazel test //javatests/com/os/structures/...
