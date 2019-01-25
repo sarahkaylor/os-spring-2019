@@ -9,6 +9,40 @@ A: Google makes Bazel plugins only for JetBrains IDEs. One exists for Eclipes, b
 Q: I don't like Bazel, I want to use CMake / Make / Maven / Gradle / etc...
 A: Part of being a software engineer is getting use to new languages and tools as they're given to you by your employer. It is important to be aware of how many build systems and version control systems work to be a successful professional. Look at this as a learning experience and embrace it. Step outside of your comfort zone.
 
+Q: I've clicked "Import Bazel" project, but it asks me to configure targets and paths, what do I do?
+A: Here's an example IntelliJ setup for the Java code in this repository (exclude the '-' characters):
+
+------
+directories:
+  # Add the directories you want added as source here
+  # By default, we've added your entire workspace ('.')
+  java/com/os/structures
+  javatests/com/os/structures
+
+targets:
+  # Add targets that reach the source code that you want to resolve here
+  # By default, we've added all targets in your workspace
+  //java/com/os/structures/...
+  //javatests/com/os/structures/...
+
+additional_languages:
+  # Uncomment any additional languages you want supported
+------
+
+A: Here's an example Clion setup for the Queue C++ code in this repository (exclude the '-' characters):
+
+------
+directories:
+  data_structures/queue
+
+targets:
+  //data_structures/queue/...
+
+additional_languages:
+  # Uncomment any additional languages you want supported
+  # dart
+------
+
 Q: I have IntelliJ/CLion installed, and the Bazel plugin installed, but all of my files show up as "unsynced"
 A: On the menu bar, click Bazel -> Sync -> Sync Project with BUILD Files
 

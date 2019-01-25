@@ -7,3 +7,9 @@ http_archive(
     build_file = "gtest.BUILD",
     strip_prefix = "googletest-release-1.7.0",
 )
+
+maven_jar(
+    name = "junit",
+    artifact = "junit:junit-dep:4.10",
+)
+
