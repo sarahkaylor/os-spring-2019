@@ -1,4 +1,4 @@
-#include "data_structures/queue.h"
+#include "data_structures/queue/queue.h"
 #include "gtest/gtest.h"
 
 using data_structures::Queue;
