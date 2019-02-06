@@ -8,11 +8,11 @@ template<typename ValueType>
 class Maybe {
 private:
     const bool is_present_;
-    const ValueType* const value_;
+    const ValueType value_;
 public:
 
     // we have an actual value
-    explicit Maybe(ValueType* const value)
+    explicit Maybe(const ValueType& value)
         : is_present_(true),
           value_(value)
     {}
@@ -27,8 +27,8 @@ public:
         return is_present_;
     }
 
-    const ValueType& Value() const {
-        return *value_;
+    const ValueType Value() const {
+        return value_;
     }
 };
 
