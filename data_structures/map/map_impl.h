@@ -4,6 +4,8 @@
 #include <string>
 #include <memory>
 #include <functional>
+#include <utility>
+#include <vector>
 #include "data_structures/map/maybe.h"
 
 namespace data_structures {
@@ -15,29 +17,69 @@ public:
     typedef std::function<bool(const KeyType&, const KeyType&)> KeyComparerFn;
     typedef std::function<uint32_t(const KeyType&)> HashCalculator;
 private:
+
+    typedef std::pair<KeyType, ValueType> MapEntry;
+    typedef std::vector<MapEntry> MapList;
+
     const KeyComparerFn key_comparer_;
     const HashCalculator hash_calculator_;
     const uint32_t capacity_;
+    uint32_t size_;
+    std::unique_ptr<MapList[]> storage_;
 public:
 
     MapImpl(const KeyComparerFn key_comparer,
             const HashCalculator hash_calculator, const uint32_t capacity)
         : key_comparer_(key_comparer), hash_calculator_(hash_calculator),
-          capacity_(capacity)
+          capacity_(capacity), size_(0), storage_(new MapList[capacity])
     {}
 
     int Size() const {
-        return -1;
+        return (int)size_;
     }
 
     void Put(const KeyType& key, const ValueType& value) {
+        auto index = GetIndex(key);
+        MapList& list = storage_.get()[index];
+        MapEntry new_entry = {key,value};
+        for(auto it = list.begin();
+            it != list.end(); ++it) {
+            MapEntry& entry = *it;
+            if(key_comparer_(entry.first, key)) {
+                list.erase(it);
+                list.emplace_back(new_entry);
+                return;
+            }
+        }
+        list.emplace_back(new_entry);
+        ++size_;
     }
 
     bool Remove(const KeyType& key) {
+        auto index = GetIndex(key);
+        MapList& list = storage_.get()[index];
+        for(auto it = list.begin();
+            it != list.end(); ++it) {
+            MapEntry& entry = *it;
+            if(key_comparer_(entry.first, key)) {
+                list.erase(it);
+                --size_;
+                return true;
+            }
+        }
         return false;
     }
 
     Maybe<ValueType> Get(const KeyType& key) const {
+        auto index = GetIndex(key);
+        MapList& list = storage_.get()[index];
+        for(auto it = list.begin();
+            it != list.end(); ++it) {
+            MapEntry& entry = *it;
+            if(key_comparer_(entry.first, key)) {
+                return Maybe<ValueType>(entry.second);
+            }
+        }
         return Maybe<ValueType>();
     }
 private:
