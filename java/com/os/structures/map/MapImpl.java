@@ -4,9 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Optional;
+import java.util.function.BiFunction;
+import java.util.function.Function;
 
 public class MapImpl<KeyType, ValueType> implements IMap<KeyType, ValueType> {
     private final IKeyHasher<KeyType> keyHasher;
+
+
     private int size;
     private final ArrayList<Entry<KeyType, ValueType>>[] entries;
     private static final int DEFAULT_CAPACITY = 10000;
