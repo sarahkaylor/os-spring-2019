@@ -17,12 +17,6 @@ public:
           value_(value)
     {}
 
-    // empty case
-    Maybe()
-        : is_present_(false),
-          value_(nullptr)
-    {}
-
     bool IsPresent() const {
         return is_present_;
     }
@@ -30,7 +24,18 @@ public:
     const ValueType Value() const {
         return value_;
     }
+
+    // empty case
+    Maybe(ValueType value, bool is_present)
+            : is_present_(is_present),
+              value_(value)
+    {}
 };
+
+template <typename ValueType>
+Maybe<ValueType> EmptyMaybe(ValueType empty_value) {
+    return Maybe<ValueType>(empty_value, false);
+}
 
 }  // namespace map
 }  // namespace data_structures

@@ -28,3 +28,22 @@ cc_test(
         "@gtest//:main",
     ],
 )
+
+cc_library(
+    name = "cache_map",
+    hdrs = ["cache_map.h"],
+    deps = [
+        ":maybe",
+    ],
+)
+
+cc_test(
+    name = "cache_map_tests",
+    srcs = ["cache_map_tests.cpp"],
+    copts = ["-Iexternal/gtest/include"],
+    deps = [
+        ":cache_map",
+        ":string_hashes",
+        "@gtest//:main",
+    ],
+)

@@ -12,11 +12,11 @@ typedef MapImpl<std::string, std::string> StringMap;
 namespace {
 
 StringMap create() {
-    return StringMap(CompareStrings, CalculateHash, 10000);
+    return StringMap(CompareStrings, CalculateHash, 10000, std::string(""));
 }
 
 StringMap createWithBadHash() {
-    return StringMap(CompareStrings, CalculateBadHash, 10000);
+    return StringMap(CompareStrings, CalculateBadHash, 10000, std::string(""));
 }
 
 } // namespace

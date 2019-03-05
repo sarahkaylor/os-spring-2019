@@ -24,14 +24,17 @@ private:
     const KeyComparerFn key_comparer_;
     const HashCalculator hash_calculator_;
     const uint32_t capacity_;
+    const ValueType empty_value_;
     uint32_t size_;
     std::unique_ptr<MapList[]> storage_;
 public:
 
     MapImpl(const KeyComparerFn key_comparer,
-            const HashCalculator hash_calculator, const uint32_t capacity)
+            const HashCalculator hash_calculator, const uint32_t capacity,
+            const ValueType empty_value)
         : key_comparer_(key_comparer), hash_calculator_(hash_calculator),
-          capacity_(capacity), size_(0), storage_(new MapList[capacity])
+          capacity_(capacity), empty_value_(empty_value),
+          size_(0), storage_(new MapList[capacity])
     {}
 
     int Size() const {
@@ -80,7 +83,7 @@ public:
                 return Maybe<ValueType>(entry.second);
             }
         }
-        return Maybe<ValueType>();
+        return EmptyMaybe(empty_value_);
     }
 private:
 
