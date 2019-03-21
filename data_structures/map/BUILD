@@ -33,6 +33,7 @@ cc_library(
     name = "cache_map",
     hdrs = ["cache_map.h"],
     deps = [
+        ":map_impl",
         ":maybe",
     ],
 )

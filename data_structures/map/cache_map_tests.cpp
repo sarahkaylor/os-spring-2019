@@ -3,6 +3,7 @@
 #include <thread>
 #include <atomic>
 #include <chrono>
+#include <semaphore.h>
 
 #include "data_structures/map/cache_map.h"
 #include "data_structures/map/string_hashes.h"
@@ -11,7 +12,7 @@
 namespace data_structures {
 namespace map{
 
-constexpr int MAX_VALUE = 1000000;
+constexpr int MAX_VALUE = 10000;
 typedef CacheMap<std::string, std::string> StringCache;
 
 namespace {
@@ -36,7 +37,7 @@ void addEvenValues(StringCache* cache) {
 
 void addOddValues(StringCache* cache) {
     for (auto i = 0; i < MAX_VALUE; i++) {
-        if (i % 3 == 0) {
+        if (i == 1 || i % 2 != 0) {
             std::string key = std::to_string(i);
             std::string value = cache->Get(
                     key,
@@ -61,7 +62,7 @@ void addForwards(StringCache* cache) {
 }
 
 void addBackwards(StringCache* cache) {
-    for (auto i = MAX_VALUE; i >= 0; i--) {
+    for (auto i = MAX_VALUE-1; i >= 0; i--) {
         std::string key = std::to_string(i);
         std::string value = cache->Get(
                 key,
@@ -145,62 +146,88 @@ TEST(CacheMapTests, testMultiThreadedAdd2) {
 namespace {
 
 std::atomic_int32_t counter_;
+sem_t slow_event_;
+sem_t fast_event_;
+sem_t slow_event_done_;
+sem_t fast_event_done_;
 
 void FastGet(StringCache* cache) {
+    auto key = std::to_string(counter_.load(std::memory_order_seq_cst));
     std::string value = cache->Get(
-            std::to_string(counter_.load(std::memory_order_seq_cst)),
+            key,
             [&]() -> std::string {
-                std::this_thread::sleep_for(std::chrono::microseconds(500));
-                return std::to_string(
-                    counter_.load(std::memory_order_seq_cst)
-                    );
+                sem_wait(&fast_event_);
+                auto value_to_add = counter_.load(std::memory_order_seq_cst);
+                return std::to_string(value_to_add);
             }
             );
+    auto counter_value = counter_.load(std::memory_order_seq_cst);
     EXPECT_EQ(
-            std::to_string(counter_.load(std::memory_order_seq_cst)),
+            std::to_string(counter_value),
             value);
+    sem_post(&fast_event_done_);
 }
 
 void SlowGet(StringCache* cache) {
+    auto key = std::to_string(counter_.load(std::memory_order_seq_cst) + 1);
     std::string value = cache->Get(
-            std::to_string(counter_.load(std::memory_order_seq_cst)),
+            key,
             [&]() -> std::string {
-                std::this_thread::sleep_for(std::chrono::seconds(2));
-                counter_++;
-                return std::to_string(
-                    counter_.load(std::memory_order_seq_cst));
+                sem_wait(&slow_event_);
+                auto value_to_add = ++counter_;
+                return std::to_string(value_to_add);
             }
     );
+    auto counter_value = counter_.load(std::memory_order_seq_cst);
     EXPECT_EQ(
-            std::to_string(counter_.load(std::memory_order_seq_cst)),
+            std::to_string(counter_value),
             value);
+    sem_post(&slow_event_done_);
 }
 
 } // namespace
 
 TEST(CacheMapTests, testTwoGetsCanHappenSimultaneously) {
     counter_ = 0;
+    sem_init(&fast_event_, 0, 0);
+    sem_init(&slow_event_, 0, 0);
+    sem_init(&fast_event_done_, 0, 0);
+    sem_init(&slow_event_done_, 0, 0);
 
     for(auto i = 0; i < 1000; i += 2) {
         auto map = std::unique_ptr<StringCache>(create());
-        std::thread slow(SlowGet, map.get());
         std::thread fast(FastGet, map.get());
+        std::thread slow(SlowGet, map.get());
 
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        sem_post(&fast_event_);
+        std::this_thread::sleep_for(std::chrono::milliseconds(5));
+        sem_post(&slow_event_);
 
-        EXPECT_EQ(
-                std::to_string(i),
-                map->Get(std::to_string(i)).Value());
+        sem_wait(&fast_event_done_);
+
+        auto key = std::to_string(i);
+        auto value = map->Get(key);
+
+        EXPECT_EQ(key, value.Value());
 
         slow.join();
         fast.join();
 
-        EXPECT_EQ(
-                std::to_string(i),
-                map->Get(std::to_string(i)).Value());
-        if(std::to_string(i) != map->Get(std::to_string(i)).Value()) {
+        sem_wait(&slow_event_done_);
+
+        if(key != value.Value()) {
             return;
         }
+
+        key = std::to_string(i+1);
+        value = map->Get(key);
+
+        EXPECT_EQ(key, value.Value());
+        if(key != value.Value()) {
+            return;
+        }
+
+        ++counter_;
     }
 }
 

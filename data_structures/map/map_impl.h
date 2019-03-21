@@ -46,7 +46,7 @@ public:
         MapList& list = storage_.get()[index];
         MapEntry new_entry = {key,value};
         for(auto it = list.begin();
-            it != list.end(); ++it) {
+            it != list.end(); it++) {
             MapEntry& entry = *it;
             if(key_comparer_(entry.first, key)) {
                 list.erase(it);

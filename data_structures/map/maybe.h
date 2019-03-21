@@ -7,8 +7,8 @@ namespace map {
 template<typename ValueType>
 class Maybe {
 private:
-    const bool is_present_;
-    const ValueType value_;
+    bool is_present_;
+    ValueType value_;
 public:
 
     // we have an actual value
@@ -16,6 +16,18 @@ public:
         : is_present_(true),
           value_(value)
     {}
+
+    Maybe(const Maybe<ValueType>& value)
+        : is_present_(value.IsPresent()),
+        value_(value.Value())
+    {
+    }
+
+    Maybe<ValueType>& operator=(const Maybe<ValueType>& value) noexcept {
+        is_present_ = value.is_present_;
+        value_ = value.Value();
+        return *this;
+    }
 
     bool IsPresent() const {
         return is_present_;
